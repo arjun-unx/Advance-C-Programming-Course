@@ -73,3 +73,7 @@ int main() {
 
     return 0;
 }
+
+4. Equivalent pointer expression for fetching the value of array element a[i][j][k][2]:
+
+Ans : int value = *(*(*(*(a + i) + j) + k) + 2);
