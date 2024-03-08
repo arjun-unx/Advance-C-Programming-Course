@@ -82,7 +82,7 @@ struct Node* rotateDoublyLinkedList(struct Node* head, int N) {
     struct Node* current = head;
     int count = 1;
 
-    // Traverse to the Nth node
+    
     while (count < N && current != NULL) {
         current = current->next;
         count++;
@@ -220,13 +220,13 @@ void sortQueue(struct Queue* queue) {
     int size = 0;
     struct Node* current = queue->front;
 
-    // Count the number of elements in the queue
+    
     while (current != NULL) {
         size++;
         current = current->next;
     }
 
-    // Perform selection sort on the queue
+
     for (int i = 0; i < size - 1; i++) {
         struct Node* minNode = queue->front;
         struct Node* prevMin = NULL;
@@ -321,7 +321,7 @@ void push(struct Stack* stack, char item) {
 
 char pop(struct Stack* stack) {
     if (isStackEmpty(stack))
-        return '\0'; // Return a special value to indicate an error
+        return '\0'; 
     return stack->array[stack->top--];
 }
 
@@ -329,12 +329,12 @@ void reverseString(char* input) {
     int length = strlen(input);
     struct Stack* stack = createStack(length);
 
-    // Push each character onto the stack
+   
     for (int i = 0; i < length; i++) {
         push(stack, input[i]);
     }
 
-    // Pop each character from the stack to reverse the string
+    
     for (int i = 0; i < length; i++) {
         input[i] = pop(stack);
     }
